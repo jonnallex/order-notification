@@ -1,28 +1,28 @@
 {
   "manifest_version": 3,
-  "name": "foodz-order-notification",
+  "name": "order-notification",
   "version": "1.0.0",
   "permissions": [
     "activeTab",   
     "storage",
-    "offscreen"     
+    "offscreen",
+    "http://bolt.foodz.test:81/*"  
   ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Foodz Order Notification",
+    "default_title": "Order Notification",
     "default_popup": "popup.html"
   },
   "web_accessible_resources": [{
-    "resources": ["sound.ogg"],
-      "matches": ["*://*/*"]
+    "matches": ["*://*/*"],
+    "resources": ["sound.ogg"]
   }],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["popup.js", "content_script.js"],
-      "run_at": "document_start"
+      "js": ["popup.js"]
     }
   ],
   "externally_connectable": {
