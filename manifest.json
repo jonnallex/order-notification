@@ -6,7 +6,8 @@
     "activeTab",   
     "storage",
     "offscreen",
-    "http://bolt.foodz.test:81/*"  
+    "http://bolt.foodz.test:81/*",
+    "https://bolt.foodz.space/*"  
   ],
   "background": {
     "service_worker": "background.js"
@@ -28,6 +29,6 @@
     }
   ],
   "externally_connectable": {
-  "matches": ["http://bolt.foodz.test:81/*"]
+  "matches": ["http://bolt.foodz.test:81/*", "https://bolt.foodz.space/*"]
   }
 }
